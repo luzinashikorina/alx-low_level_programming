@@ -1,39 +1,24 @@
-/*
- *
- *  * File: 101-quote.c
- *
- *   * Auth: luzinashikorina
- *    */
+#include <stdio.h>
 
-
-
-#include <unistd.h>
+#include <stdlib.h>
 
 
 
 /**
  *
- *  * main - Prints "and that piece of art is useful" - Dora Korpar, 2015-10-19",
+ *  * main - Entry point
  *
- *   *                followed by a new line, to standard error.
+ *   * Return: Always 1 (Success)
  *
- *    *
- *
- *     * Return: Always 1.
- *
- *      */
+ *    */
 
 int main(void)
 
 {
 
-		write(2,
+		write(STDOUT_FILENO, "and that piece of art is useful
 
-					      "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",
-
-					      	      59);
-
-
+							\" - Dora Korpar, 2015-10-19\n", 59);
 
 			return (1);
 
