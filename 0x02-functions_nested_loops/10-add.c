@@ -1,6 +1,12 @@
 #include "main.h"
 
-int add(int one, int two)
+/**
+ * add - Add two integers
+ * @x: int type number
+ * @y: int type number
+ * Return: result of addition
+ */
+int add(int x, int y)
 {
-	return (one + two);
+	return (x + y);
 }
