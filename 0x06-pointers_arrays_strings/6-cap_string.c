@@ -1,63 +1,31 @@
 #include "main.h"
-
-#include <stdio.h>
-
-
-
 /**
- *
- *   * cap_string - ...
- *
- *     * @s: ...
- *
- *       *
- *
- *         * Return: char value
- *
- *           */
-
+ * cap_string - function that capitalizes all words of a string.
+ * @s: string
+ * Return: output
+ */
 char *cap_string(char *s)
-
 {
+	int i = 0;
 
-		int a = 0, i;
-
-			int cspc = 13;
-
-				char spc[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
-
-
-
-					while (s[a])
-
-							{
-
-										i = 0;
-
-
-
-												while (i < cspc)
-
-															{
-
-																			if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
-
-																								s[a] -= 32;
-
-
-
-																						i++;
-
-																								}
-
-
-
-														a++;
-
-															}
-
-
-
-						return (s);
-
+	if (s[i] >= 97 && s[i] <= 122)
+	{
+		s[i] -= 32;
+	}
+	while (s[i] != '\0')
+	{
+		if (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'
+		    || s[i] == ',' || s[i] == ';' || s[i] == '.'
+		    || s[i] == '!' || s[i] == '?' || s[i] == '"'
+		    || s[i] == '(' || s[i] == ')' || s[i] == '{'
+		    || s[i] == '}')
+		{
+			if (s[i + 1] >= 97 && s[i + 1] <= 122)
+			{
+				s[i + 1] -= 32;
+			}
+		}
+		i++;
+	}
+	return (s);
 }
